@@ -151,3 +151,10 @@ jobs:
           TAGS: ${{ steps.push.outputs.digest }}
           COSIGN_EXPERIMENTAL: false
           COSIGN_PRIVATE_KEY: ${{ secrets.SIGNING_SECRET }}
+
+# resources:
+#   pipelines:
+#   - pipeline: "build-ublue-custom" # Name of the pipeline resource.
+#     source: "Bluefin Stable" # The name of the pipeline referenced by this pipeline resource.
+#     project: "ublue-os/bluefin" # Required only if the source pipeline is in another project
+#     trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
